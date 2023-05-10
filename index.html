@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <form name="calculator">
+      <input type="text" name="result" id="result" readonly>
+      <br>
+      <input type="button" value="1" onclick="calculator.result.value += '1'">
+      <input type="button" value="2" onclick="calculator.result.value += '2'">
+      <input type="button" value="3" onclick="calculator.result.value += '3'">
+      <input type="button" value="+" onclick="calculator.result.value += '+'">
+      <br>
+      <input type="button" value="4" onclick="calculator.result.value += '4'">
+      <input type="button" value="5" onclick="calculator.result.value += '5'">
+      <input type="button" value="6" onclick="calculator.result.value += '6'">
+      <input type="button" value="-" onclick="calculator.result.value += '-'">
+      <br>
+      <input type="button" value="7" onclick="calculator.result.value += '7'">
+      <input type="button" value="8" onclick="calculator.result.value += '8'">
+      <input type="button" value="9" onclick="calculator.result.value += '9'">
+      <input type="button" value="*" onclick="calculator.result.value += '*'">
+      <br>
+      <input type="button" value="C" onclick="calculator.result.value = ''">
+      <input type="button" value="0" onclick="calculator.result.value += '0'">
+      <input type="button" value="=" onclick="calculator.result.value = eval(calculator.result.value)">
+      <input type="button" value="/" onclick="calculator.result.value += '/'">
+      <br>
+    </form>
+    <script>
+    // Prevent form submission
+document.forms.calculator.addEventListener('submit', function (event) {
+  event.preventDefault();
+});
+
+// Set focus on the result input field
+document.getElementById('result').focus();
+    </script>
+  </body>
+</html>
